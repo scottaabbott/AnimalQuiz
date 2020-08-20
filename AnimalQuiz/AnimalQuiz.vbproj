@@ -73,18 +73,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QuizStorage.vb" />
-    <Compile Include="WelcomeForm.vb">
+    <Compile Include="frmHelp.Designer.vb">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeForm.Designer.vb">
-      <DependentUpon>WelcomeForm.vb</DependentUpon>
+    <Compile Include="Overview.vb" />
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuestionForm.Designer.vb">
-      <DependentUpon>QuestionForm.vb</DependentUpon>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuestionForm.vb">
+    <Compile Include="frmQuiz.Designer.vb">
+      <DependentUpon>frmQuiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuiz.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -104,11 +110,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.vb</DependentUpon>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuestionForm.resx">
-      <DependentUpon>QuestionForm.vb</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuiz.resx">
+      <DependentUpon>frmQuiz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

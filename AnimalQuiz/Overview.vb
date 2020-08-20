@@ -1,4 +1,5 @@
-﻿Module QuizStorage
+﻿Imports AnimalQuiz
+Module Overview
     ' ------------------
     ' PUBLIC VARIABLES
     '-------------------
@@ -10,6 +11,7 @@
     ' QUIZ QUESTION CONTENT
     '------------------------
 
+    ' parallel array version 
     Public QuizQuestionText(MAX_QUESTIONS) As String
     Public QuizOption1Text(MAX_QUESTIONS) As String
     Public QuizOption1Response(MAX_QUESTIONS) As String
@@ -21,6 +23,7 @@
     Public QuizOption4Response(MAX_QUESTIONS) As String
     Public QuizQuestionAnswer(MAX_QUESTIONS) As Integer
 
-    Public QuestionNo As Integer
+    ' pointer to current question
+    Public CurrentQuestionNo As Integer
 End Module
 

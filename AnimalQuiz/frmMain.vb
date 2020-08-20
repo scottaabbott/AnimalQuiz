@@ -1,4 +1,4 @@
-﻿Public Class WelcomeForm
+﻿Public Class frmMain
 
     Public Sub New()
 
@@ -9,18 +9,21 @@
 
         ' load questions for quiz
         LoadQuiz()
+
+        ' reset Question pointer to first question
+        CurrentQuestionNo = 0
         'ShowQuestion(0)
 
     End Sub
-    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+    Private Sub btnStart_Click(sender As Object, e As EventArgs)
         Me.Hide()
 
         ' load questions for quiz
         'LoadQuiz()
         'ShowQuestion(0)
 
-        QuestionNo = 0
-        QuestionForm.Show()
+
+        frmQuiz.Show()
         'For QuestionNo = 0 To (MAX_QUESTIONS - 1)
         '   QuestionForm.Show()
         '    Exit For
@@ -63,5 +66,23 @@
         Dim Feedback As String = "O1: " & QuizOption1Text(QnNum) & "O2: " & QuizOption2Text(QnNum)
 
         MsgBox(Feedback, vbOKOnly, Title)
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MessageBox.Show("This wonderful program was created by Teagan Abbott.")
+    End Sub
+
+    Private Sub QuizToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuizToolStripMenuItem.Click
+        Me.Hide()
+        frmQuiz.Show()
+    End Sub
+
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+        Me.Hide()
+        frmHelp.Show()
     End Sub
 End Class
