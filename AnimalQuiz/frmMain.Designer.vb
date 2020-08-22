@@ -24,7 +24,7 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.labHeader2 = New System.Windows.Forms.Label()
-        Me.lblClickToStart = New System.Windows.Forms.Label()
+        Me.lblScore = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,6 +33,7 @@ Partial Class frmMain
         Me.FormsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuizToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblShowPoints = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,16 +58,15 @@ Partial Class frmMain
         Me.labHeader2.TabIndex = 1
         Me.labHeader2.Text = "Animal Group Quiz 2020"
         '
-        'lblClickToStart
+        'lblScore
         '
-        Me.lblClickToStart.AutoSize = True
-        Me.lblClickToStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblClickToStart.Location = New System.Drawing.Point(78, 139)
-        Me.lblClickToStart.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblClickToStart.Name = "lblClickToStart"
-        Me.lblClickToStart.Size = New System.Drawing.Size(221, 24)
-        Me.lblClickToStart.TabIndex = 3
-        Me.lblClickToStart.Text = "Click the button to start"
+        Me.lblScore.AutoSize = True
+        Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScore.Location = New System.Drawing.Point(78, 139)
+        Me.lblScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblScore.Name = "lblScore"
+        Me.lblScore.Size = New System.Drawing.Size(0, 25)
+        Me.lblScore.TabIndex = 3
         '
         'MenuStrip1
         '
@@ -87,18 +87,18 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(104, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'FormsToolStripMenuItem
@@ -111,26 +111,37 @@ Partial Class frmMain
         'QuizToolStripMenuItem
         '
         Me.QuizToolStripMenuItem.Name = "QuizToolStripMenuItem"
-        Me.QuizToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.QuizToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.QuizToolStripMenuItem.Text = "Quiz"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'lblShowPoints
+        '
+        Me.lblShowPoints.AutoSize = True
+        Me.lblShowPoints.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblShowPoints.Location = New System.Drawing.Point(83, 128)
+        Me.lblShowPoints.Name = "lblShowPoints"
+        Me.lblShowPoints.Size = New System.Drawing.Size(77, 25)
+        Me.lblShowPoints.TabIndex = 6
+        Me.lblShowPoints.Text = "Label1"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(368, 285)
-        Me.Controls.Add(Me.lblClickToStart)
+        Me.Controls.Add(Me.lblShowPoints)
+        Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.labHeader2)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMain"
         Me.Text = "Animal Quiz 2020"
         Me.MenuStrip1.ResumeLayout(False)
@@ -142,7 +153,7 @@ Partial Class frmMain
 
     Friend WithEvents lblWelcome As Label
     Friend WithEvents labHeader2 As Label
-    Friend WithEvents lblClickToStart As Label
+    Friend WithEvents lblScore As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
@@ -151,4 +162,5 @@ Partial Class frmMain
     Friend WithEvents FormsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuizToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblShowPoints As Label
 End Class

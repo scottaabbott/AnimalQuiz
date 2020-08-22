@@ -4,7 +4,7 @@ Module Overview
     ' PUBLIC VARIABLES
     '-------------------
 
-    Public points As Integer
+    Public Score As Integer
     Public MAX_QUESTIONS As Integer = 20
 
     ' -----------------------
@@ -25,5 +25,6 @@ Module Overview
 
     ' pointer to current question
     Public CurrentQuestionNo As Integer
+
 End Module
 

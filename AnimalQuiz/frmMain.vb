@@ -1,4 +1,6 @@
-﻿Public Class frmMain
+﻿Imports System.Text
+
+Public Class frmMain
 
     Public Sub New()
 
@@ -12,7 +14,7 @@
 
         ' reset Question pointer to first question
         CurrentQuestionNo = 0
-        'ShowQuestion(0)
+        ShowQuestion(0)
 
     End Sub
     Private Sub btnStart_Click(sender As Object, e As EventArgs)
@@ -61,11 +63,15 @@
     End Sub
     Public Sub ShowQuestion(QnNum As Integer)
         ' Housekeeping
+        Dim Contents As String
 
         Dim Title As String = QnNum.ToString & ") - " & QuizQuestionText(QnNum)
-        Dim Feedback As String = "O1: " & QuizOption1Text(QnNum) & "O2: " & QuizOption2Text(QnNum)
+        Contents = "O1: " & QuizOption1Text(QnNum) & ", " & QuizOption1Response(QnNum) & vbCrLf
+        Contents += "O2: " & QuizOption2Text(QnNum) & ", " & QuizOption2Response(QnNum) & vbCrLf
+        Contents += "O3: " & QuizOption3Text(QnNum) & ", " & QuizOption3Response(QnNum) & vbCrLf
+        Contents += "O4: " & QuizOption4Text(QnNum) & ", " & QuizOption4Response(QnNum) & vbCrLf
 
-        MsgBox(Feedback, vbOKOnly, Title)
+        MsgBox(Contents, vbOKOnly, Title)
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -84,5 +90,13 @@
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
         Me.Hide()
         frmHelp.Show()
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        lblShowPoints.Text = "Your score is " & Score.ToString & " points."
     End Sub
 End Class
