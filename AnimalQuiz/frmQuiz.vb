@@ -94,10 +94,9 @@ Public Class frmQuiz
         ClearSelections()
 
         ' load question details in form
-        'ShowQuestion(QuestionNo)
         lblQnNum.Text = "#" & (CurrentQuestionNo + 1).ToString
         gbxQuestion.Text = QuizQuestionText(CurrentQuestionNo).ToString
-        'gbxQuestion.Text = (CurrentQuestionNo + 1).ToString & ") " & QuizQuestionText(CurrentQuestionNo).ToString
+
         optChoice1.Text = QuizOption1Text(CurrentQuestionNo)
         optChoice2.Text = QuizOption2Text(CurrentQuestionNo)
         optChoice3.Text = QuizOption3Text(CurrentQuestionNo)
