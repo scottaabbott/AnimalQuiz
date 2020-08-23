@@ -5,7 +5,7 @@ Module Overview
     '-------------------
 
     Public Score As Integer
-    Public MAX_QUESTIONS As Integer = 20
+    Public MAX_QUESTIONS As Integer = 3
 
     ' -----------------------
     ' QUIZ QUESTION CONTENT

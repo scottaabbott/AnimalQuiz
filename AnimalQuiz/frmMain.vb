@@ -14,6 +14,7 @@ Public Class frmMain
 
         ' reset Question pointer to first question
         CurrentQuestionNo = 0
+
         ShowQuestion(0)
 
     End Sub
@@ -39,6 +40,24 @@ Public Class frmMain
         LoadOption(0, 2, "Flock", "Wrong! Generic. Try thinking outside the box!")
         LoadOption(0, 3, "Hoard", "Nope! Nice Try!")
         LoadOption(0, 4, "Squable", "Wrong! Wow ur REALLY thinking about this huh?")
+        ShowQuestion(0) ' debug only
+
+        ' Question 2 (stored in array slot #1) 
+        LoadQuestion(1, "What is the name for a group of Cats?", 2)
+        LoadOption(1, 1, "Glare", "Correct! Good Job!")
+        LoadOption(1, 1, "Corral", "Wrong! God you wish  you could corral then XD!")
+        LoadOption(1, 2, "Glare", "Correct! Good Job!")
+        LoadOption(1, 3, "Feral", "Nope! Not the name of the group but yes those buggers really are feral!")
+        LoadOption(1, 4, "Clump", "Wrong!.......um..are you ok?")
+        ShowQuestion(1) ' debug only
+
+        ' Question 3 (stored in array slot #2) 
+        LoadQuestion(2, "What is the name for a group of Aligators?", 3)
+        LoadOption(2, 1, "Snap", "Nope! Not the name of the group but the sound they make when they eat you alive!")
+        LoadOption(2, 2, "Pack", "Wrong! Generic...")
+        LoadOption(2, 3, "Congregation", "Correct! Good Job!")
+        LoadOption(2, 4, "Swarm", "Wrong! If they had stingers maybe. Imagine that. *shudders*")
+        ShowQuestion(2) ' debug only
     End Sub
 
     Private Sub LoadQuestion(QnNum As Integer, QnText As String, QnAnswer As Integer)
@@ -71,7 +90,7 @@ Public Class frmMain
         Contents += "O3: " & QuizOption3Text(QnNum) & ", " & QuizOption3Response(QnNum) & vbCrLf
         Contents += "O4: " & QuizOption4Text(QnNum) & ", " & QuizOption4Response(QnNum) & vbCrLf
 
-        MsgBox(Contents, vbOKOnly, Title)
+        MsgBox(Contents, vbInformation + vbOKOnly, Title)
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -84,7 +103,10 @@ Public Class frmMain
 
     Private Sub QuizToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuizToolStripMenuItem.Click
         Me.Hide()
+        ' set question counter back to start of quiz
+        CurrentQuestionNo = 0
         frmQuiz.Show()
+
     End Sub
 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
